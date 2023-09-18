@@ -37,7 +37,7 @@ function App() {
   const v_headers = { 
    'Access-Control-Allow-Origin': '*'
   ,'Access-Control-Allow-Headers': '*'
-  ,'Content-type': 'application/json; charset=UTF-8'
+  ,'Content-type': 'application/json'
   ,'api-key': api_key
 }
 
@@ -45,7 +45,7 @@ function App() {
     e.preventDefault()    
 
     let result = await fetch('https://data.mongodb-api.com/app/data-syoug/endpoint/data/v1/action/find', {
-      mode: 'no-cors',
+      // mode: 'no-cors',
       method: 'POST',
       body: JSON.stringify({"dataSource": "Cluster0","database": "ExpenseTracker","collection": "ExpenseTracker"}),
       headers: v_headers
